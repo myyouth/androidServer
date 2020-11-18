@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+
+    <!--application.properties 传递参数，不能使用logback 自带的<property>标签 -->
+    <springProperty scope="context" name="appname" source="logback.appname"/>
+    <springProperty scope="context" name="logdir" source="logback.logdir"/>
+
+    <contextName>${appname}</contextName>
+
+    <!--输出到控制台 ConsoleAppender-->
+    <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
+        <!--展示格式 layout-->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>
+            </pattern>
+        </layout>
+    </appender>
+
+    <!--    <appender name="Log" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+    <!--    	&lt;!&ndash;日志名称，如果没有File 属性，那么只会使用FileNamePattern的文件路径规则-->
+    <!--	        如果同时有<File>和<FileNamePattern>，那么当天日志是<File>，明天会自动把今天-->
+    <!--	        的日志改名为今天的日期。即，<File> 的日志都是当天的。-->
+    <!--	    &ndash;&gt;-->
+    <!--	    <File>${logdir}/info.${appname}.log</File>-->
+    <!--	    &lt;!&ndash;滚动策略，按照时间滚动 TimeBasedRollingPolicy&ndash;&gt;-->
+    <!--	    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+    <!--	        &lt;!&ndash;文件路径,定义了日志的切分方式——把每一天的日志归档到一个文件中,以防止日志填满整个磁盘空间&ndash;&gt;-->
+    <!--	        <FileNamePattern>${logdir}/info.${appname}.%d{yyyy-MM-dd}.log</FileNamePattern>-->
+    <!--	        &lt;!&ndash;只保留最近90天的日志&ndash;&gt;-->
+    <!--	        <maxHistory>90</maxHistory>-->
+    <!--	        &lt;!&ndash;用来指定日志文件的上限大小，那么到了这个值，就会删除旧的日志&ndash;&gt;-->
+    <!--	        <totalSizeCap>1GB</totalSizeCap>-->
+    <!--	    </rollingPolicy>-->
+    <!--        &lt;!&ndash;日志输出编码格式化&ndash;&gt;-->
+    <!--	    <encoder>-->
+    <!--	        <charset>UTF-8</charset>-->
+    <!--	        <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+    <!--	    </encoder>-->
+    <!--    </appender>-->
+
+    <!-- 测试环境+开发环境. 多个使用逗号隔开. -->
+    <springProfile name="prep,dev">
+        <logger name="com.zjKingdee.androidServer" level="DEBUG" additivity="false">
+            <appender-ref ref="consoleLog"/>
+        </logger>
+    </springProfile>
+
+    <!-- 生产环境. -->
+    <springProfile name="prod">
+        <!--        <logger name="com.zjKingdee.androidServer" level="INFO" additivity="fasle">-->
+        <!--            <appender-ref ref="Log"/>-->
+        <!--        </logger>-->
+    </springProfile>
+
+    <root level="info">
+        <appender-ref ref="consoleLog"/>
+        <!--   	 	<appender-ref ref="Log"/>-->
+    </root>
+</configuration>

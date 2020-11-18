@@ -1,0 +1,24 @@
+11:45:43.197 kingdee [Thread-25] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+11:45:43.203 kingdee [Thread-25] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+11:45:43.204 kingdee [Thread-25] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+11:45:43.205 kingdee [Thread-25] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+11:45:43.208 kingdee [Thread-25] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+11:45:43.211 kingdee [Thread-25] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+13:53:23.056 kingdee [Thread-97] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+13:53:23.060 kingdee [Thread-97] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+13:53:23.060 kingdee [Thread-97] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+13:53:23.060 kingdee [Thread-97] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+13:53:23.063 kingdee [Thread-97] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown initiated...
+13:53:23.068 kingdee [Thread-97] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown completed.
+14:33:51.564 kingdee [Thread-25] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+14:33:51.570 kingdee [Thread-25] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+14:33:51.571 kingdee [Thread-25] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+14:33:51.571 kingdee [Thread-25] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+14:33:51.575 kingdee [Thread-25] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+14:33:51.580 kingdee [Thread-25] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+15:20:26.967 kingdee [Thread-86] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+15:20:26.970 kingdee [Thread-86] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+15:20:26.970 kingdee [Thread-86] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+15:20:26.970 kingdee [Thread-86] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+15:20:26.972 kingdee [Thread-86] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+15:20:26.975 kingdee [Thread-86] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.

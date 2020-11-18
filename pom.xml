@@ -1,0 +1,183 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.zjKingdee</groupId>
+  <artifactId>androidServer</artifactId>
+  <packaging>jar</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>androidServer Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.1.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+ 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+ 
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-devtools</artifactId>
+	        <optional>true</optional>
+	    </dependency>
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.microsoft.sqlserver</groupId>
+		    <artifactId>sqljdbc4</artifactId>
+		    <version>4.0</version>
+		</dependency>
+	    <dependency>  
+           <groupId> org.aspectj</groupId >  
+           <artifactId> aspectjweaver</artifactId >  
+        </dependency> 
+    	<dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+        </dependency>
+        <dependency><!-- 该依赖必加，里面有sping对schedule的支持 -->
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+        <!--必须添加，要不然会出错，项目无法启动-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
+        <dependency>  
+		    <groupId>com.alibaba</groupId>  
+		    <artifactId>fastjson</artifactId>  
+		    <version>1.2.41</version>  
+		</dependency>  
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>RELEASE</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>RELEASE</version>
+		</dependency>
+		<!-- axis 依赖开始 -->
+   		<dependency>
+   			<groupId>org.apache.axis</groupId>
+   			<artifactId>axis</artifactId>
+   			<version>1.4</version>
+   		</dependency>
+   		<dependency>
+   			<groupId>axis</groupId>
+   			<artifactId>axis-jaxrpc</artifactId>
+   			<version>1.4</version>
+   		</dependency>
+   		<dependency>
+   			<groupId>commons-discovery</groupId>
+   			<artifactId>commons-discovery</artifactId>
+   			<version>0.2</version>
+   		</dependency>
+   		<dependency>
+   			<groupId>wsdl4j</groupId>
+   			<artifactId>wsdl4j</artifactId>
+   			</dependency>
+           <!-- axis 依赖结束 -->
+        <dependency>
+	 		<groupId>org.apache.pdfbox</groupId>
+	 		<artifactId>pdfbox</artifactId>
+	 		<version>2.0.6</version>
+		</dependency>
+	 	<dependency>
+        	<groupId>com.google.zxing</groupId>
+        	<artifactId>core</artifactId>
+        	<version>3.3.0</version>
+    	</dependency>
+    	<dependency>
+        	<groupId>com.google.zxing</groupId>
+        	<artifactId>javase</artifactId>
+        	<version>3.3.0</version>
+    	</dependency>
+    	<dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itextpdf</artifactId>
+            <version>5.4.3</version>
+        </dependency>
+		<dependency>
+			<groupId>com.itextpdf.tool</groupId>
+			<artifactId>xmlworker</artifactId>
+			<version>5.4.3</version>
+		</dependency>
+
+		<dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itext-asian</artifactId>
+            <version>5.2.0</version>
+        </dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- 打包生成windows服务 -->
+			<plugin>
+		        <groupId>cn.joylau.code</groupId>
+		        <artifactId>joylau-springboot-daemon-windows</artifactId>
+		        <version>1.1.RELEASE</version>
+		        <executions>
+		            <execution>
+		                <id>make-win-service</id>
+		                <phase>package</phase>
+		                <goals>
+		                    <goal>make-win-service</goal>
+		                </goals>
+		            </execution>
+		        </executions>
+		        <configuration>
+		            <vmOptions>-Xms1024m -Xmx2048m</vmOptions>
+		            <!-- <programArguments>server.port=9090</programArguments> -->
+		        </configuration>
+		    </plugin>
+		</plugins>
+		<!-- <finalName>MES-Kingdee</finalName> -->
+		<resources>
+			<resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+			<resource>
+				<directory>src/main/webapp</directory>
+				 <!--注意此次必须要放在此目录下才能被访问到 -->
+		         <targetPath>META-INF/resources</targetPath>
+		         <includes>
+		            <include>**/**</include>
+		         </includes>
+			</resource>
+		</resources>
+	</build>
+</project>

@@ -1,0 +1,24 @@
+11:34:18.586 kingdee [Thread-192] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+11:34:18.595 kingdee [Thread-192] INFO  o.s.s.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+11:34:18.596 kingdee [Thread-192] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+11:34:18.596 kingdee [Thread-192] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+11:34:18.597 kingdee [Thread-192] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+11:34:18.599 kingdee [Thread-192] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+11:34:18.601 kingdee [Thread-192] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown initiated...
+11:34:18.603 kingdee [Thread-192] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown completed.
+14:18:15.648 kingdee [Thread-372] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+14:18:15.651 kingdee [Thread-372] INFO  o.s.s.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+14:18:15.651 kingdee [Thread-372] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+14:18:15.651 kingdee [Thread-372] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+14:18:15.652 kingdee [Thread-372] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+14:18:15.654 kingdee [Thread-372] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+14:18:15.657 kingdee [Thread-372] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Shutdown initiated...
+14:18:15.660 kingdee [Thread-372] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Shutdown completed.
+15:18:04.694 kingdee [Thread-564] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+15:18:04.695 kingdee [Thread-564] INFO  o.s.s.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+15:18:04.695 kingdee [Thread-564] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+15:18:04.695 kingdee [Thread-564] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+15:18:04.695 kingdee [Thread-564] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+15:18:04.695 kingdee [Thread-564] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+15:18:04.695 kingdee [Thread-564] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-40 - Shutdown initiated...
+15:18:04.696 kingdee [Thread-564] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-40 - Shutdown completed.
