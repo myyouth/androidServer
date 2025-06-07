@@ -155,18 +155,16 @@ public class PDAJobWorkingService {
 			entryEntity.setInputNumber1(entity.getOutputNumber());
 			entryEntity.setBadNumber1(entity.getBadNumber());
 			entryEntity.setTaskTime1(entity.getTaskTime());
-		}else if(entryEntity.getUserID2().equals("0")) {
-			entryEntity.setUserID2(entity.getUserID());
-			entryEntity.setUserID2(entity.getUserID());
-			entryEntity.setInputNumber2(entity.getOutputNumber());
-			entryEntity.setBadNumber2(entity.getBadNumber());
-			entryEntity.setTaskTime2(entity.getTaskTime());
-		}else if(entryEntity.getUserID3().equals("0")) {
-			entryEntity.setUserID3(entity.getUserID());
-			entryEntity.setUserID3(entity.getUserID());
-			entryEntity.setInputNumber3(entity.getOutputNumber());
-			entryEntity.setBadNumber3(entity.getBadNumber());
-			entryEntity.setTaskTime3(entity.getTaskTime());
+                }else if(entryEntity.getUserID2().equals("0")) {
+                        entryEntity.setUserID2(entity.getUserID());
+                        entryEntity.setInputNumber2(entity.getOutputNumber());
+                        entryEntity.setBadNumber2(entity.getBadNumber());
+                        entryEntity.setTaskTime2(entity.getTaskTime());
+                }else if(entryEntity.getUserID3().equals("0")) {
+                        entryEntity.setUserID3(entity.getUserID());
+                        entryEntity.setInputNumber3(entity.getOutputNumber());
+                        entryEntity.setBadNumber3(entity.getBadNumber());
+                        entryEntity.setTaskTime3(entity.getTaskTime());
 		}
 		if(entity.getBadID().length()>0 && (entryEntity.getBadID1().equals("0")||entryEntity.getBadID1().equals(entity.getBadID()))) {
 			entryEntity.setBadID1(entity.getBadID());
